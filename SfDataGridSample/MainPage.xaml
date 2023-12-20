@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:SfDataGridSample"
+             x:Class="SfDataGridSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:EmployeeViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:DataGridHeaderCell">
+            <Setter Property="Background" Value="#0074E3"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+    </ContentPage.Resources>
+
+<Grid RowDefinitions="*,*">
+
+    <syncfusion:SfDataGrid  Grid.Row="0"
+                        ItemsSource="{Binding Employees}"
+                        AutoGenerateColumnsMode="None"
+                        DefaultColumnWidth="155">
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridTextColumn MappingName="EmployeeID"
+                                        HeaderText="Employee ID" />
+            <syncfusion:DataGridTextColumn MappingName="Name"
+                                        HeaderText="Name" />
+            <syncfusion:DataGridTextColumn MappingName="IDNumber"
+                            HeaderText="ID Number" />
+        </syncfusion:SfDataGrid.Columns>
+    </syncfusion:SfDataGrid>
+
+    <syncfusion:SfDataGrid  Grid.Row="1"
+                        ItemsSource="{Binding Employees}"
+                        AutoGenerateColumnsMode="None"
+                        DefaultColumnWidth="155">
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridTextColumn MappingName="EmployeeID"
+                                        HeaderText="Employee ID" />
+            <syncfusion:DataGridTextColumn MappingName="Name"
+                                        HeaderText="Name" />
+            <syncfusion:DataGridTextColumn MappingName="IDNumber"
+                            HeaderText="ID Number" />
+        </syncfusion:SfDataGrid.Columns>
+    </syncfusion:SfDataGrid>
+
+</Grid>
+</ContentPage>
