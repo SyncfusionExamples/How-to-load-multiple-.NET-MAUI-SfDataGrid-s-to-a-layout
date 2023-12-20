@@ -1,4 +1,4 @@
-# How to load multiple SfDataGrid's to a layout
+# How to load multiple .NET MAUI SfDataGrid to a Layout
 
 You can to load multiple SfDataGrid’s in single view based on the requirement. In the below code multiple SfDataGrid has been loaded inside Grid layout and defined using RowDefinition.
 
